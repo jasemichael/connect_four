@@ -1,0 +1,9 @@
+venv
+.DS_Store
+.vscode
+__pycache__
+*.pyc
+*.zip
+*.bak
+*.csv
+!area_titles.csv
