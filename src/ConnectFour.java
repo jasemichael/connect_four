@@ -51,43 +51,9 @@ public class ConnectFour extends Application {
 						Circle c4 = (Circle) vv.getChildren().get(vj-3);
 						if((c1.getFill() == Color.YELLOW && c2.getFill() == Color.YELLOW && c3.getFill() == Color.YELLOW && c4.getFill() == Color.YELLOW) || (c1.getFill() == Color.RED && c2.getFill() == Color.RED && c3.getFill() == Color.RED && c4.getFill() == Color.RED)){
 							//FLASHING WIN
-							//DISK 1
-							FillTransition fillTrans1 = new FillTransition(Duration.millis(1000));
-							fillTrans1.setShape(c1);
-							fillTrans1.setFromValue(Color.BLACK);
-							fillTrans1.setToValue(color);
-							fillTrans1.setCycleCount(50);
-							fillTrans1.setAutoReverse(true);
-							fillTrans1.play();
-							//DISK 2
-							FillTransition fillTrans2 = new FillTransition(Duration.millis(1000));
-							fillTrans2.setShape(c2);
-							fillTrans2.setFromValue(Color.BLACK);
-							fillTrans2.setToValue(color);
-							fillTrans2.setCycleCount(50);
-							fillTrans2.setAutoReverse(true);
-							fillTrans2.play();
-							//DISK 3
-							FillTransition fillTrans3 = new FillTransition(Duration.millis(1000));
-							fillTrans3.setShape(c3);
-							fillTrans3.setFromValue(Color.BLACK);
-							fillTrans3.setToValue(color);
-							fillTrans3.setCycleCount(50);
-							fillTrans3.setAutoReverse(true);
-							fillTrans3.play();
-							//DISK 4
-							FillTransition fillTrans4 = new FillTransition(Duration.millis(1000));
-							fillTrans4.setShape(c4);
-							fillTrans4.setFromValue(Color.BLACK);
-							fillTrans4.setToValue(color);
-							fillTrans4.setCycleCount(50);
-							fillTrans4.setAutoReverse(true);
-							fillTrans4.play();
+							flashDisks(c1, c2, c3, c4, color);
 							//Disable clicking
-							for(int q=0; q<7; q++){
-								VBox vq = (VBox) pane.getChildren().get(q);
-								vq.setOnMouseClicked(null);
-							}
+							disableClick(pane);
 						}
 					}
 				}
@@ -104,42 +70,9 @@ public class ConnectFour extends Application {
 						Circle hc4 = (Circle) hv4.getChildren().get(hj);
 						if((hc1.getFill() == Color.YELLOW && hc2.getFill() == Color.YELLOW && hc3.getFill() == Color.YELLOW && hc4.getFill() == Color.YELLOW) || (hc1.getFill() == Color.RED && hc2.getFill() == Color.RED && hc3.getFill() == Color.RED && hc4.getFill() == Color.RED)){
 							//FLASHING WIN
-							//DISK 1
-							FillTransition fillTrans1 = new FillTransition(Duration.millis(1000));
-							fillTrans1.setShape(hc1);
-							fillTrans1.setFromValue(Color.BLACK);
-							fillTrans1.setToValue(color);
-							fillTrans1.setCycleCount(50);
-							fillTrans1.setAutoReverse(true);
-							fillTrans1.play();
-							//DISK 2
-							FillTransition fillTrans2 = new FillTransition(Duration.millis(1000));
-							fillTrans2.setShape(hc2);
-							fillTrans2.setFromValue(Color.BLACK);
-							fillTrans2.setToValue(color);
-							fillTrans2.setCycleCount(50);
-							fillTrans2.setAutoReverse(true);
-							fillTrans2.play();
-							//DISK 3
-							FillTransition fillTrans3 = new FillTransition(Duration.millis(1000));
-							fillTrans3.setShape(hc3);
-							fillTrans3.setFromValue(Color.BLACK);
-							fillTrans3.setToValue(color);
-							fillTrans3.setCycleCount(50);
-							fillTrans3.setAutoReverse(true);
-							fillTrans3.play();
-							//DISK 4
-							FillTransition fillTrans4 = new FillTransition(Duration.millis(1000));
-							fillTrans4.setShape(hc4);
-							fillTrans4.setFromValue(Color.BLACK);
-							fillTrans4.setToValue(color);
-							fillTrans4.setCycleCount(50);
-							fillTrans4.setAutoReverse(true);
-							fillTrans4.play();
-							for(int q=0; q<7; q++){
-								VBox vq = (VBox) pane.getChildren().get(q);
-								vq.setOnMouseClicked(null);
-							}
+							flashDisks(hc1, hc2, hc3, hc4, color);
+							//Disable clicking
+							disableClick(pane);
 						}
 					}
 				}
@@ -156,42 +89,9 @@ public class ConnectFour extends Application {
 						Circle dc4 = (Circle) dv4.getChildren().get(dj-3);
 						if((dc1.getFill() == Color.YELLOW && dc2.getFill() == Color.YELLOW && dc3.getFill() == Color.YELLOW && dc4.getFill() == Color.YELLOW) || (dc1.getFill() == Color.RED && dc2.getFill() == Color.RED && dc3.getFill() == Color.RED && dc4.getFill() == Color.RED)){
 							//FLASHING WIN
-							//DISK 1
-							FillTransition fillTrans1 = new FillTransition(Duration.millis(1000));
-							fillTrans1.setShape(dc1);
-							fillTrans1.setFromValue(Color.BLACK);
-							fillTrans1.setToValue(color);
-							fillTrans1.setCycleCount(50);
-							fillTrans1.setAutoReverse(true);
-							fillTrans1.play();
-							//DISK 2
-							FillTransition fillTrans2 = new FillTransition(Duration.millis(1000));
-							fillTrans2.setShape(dc2);
-							fillTrans2.setFromValue(Color.BLACK);
-							fillTrans2.setToValue(color);
-							fillTrans2.setCycleCount(50);
-							fillTrans2.setAutoReverse(true);
-							fillTrans2.play();
-							//DISK 3
-							FillTransition fillTrans3 = new FillTransition(Duration.millis(1000));
-							fillTrans3.setShape(dc3);
-							fillTrans3.setFromValue(Color.BLACK);
-							fillTrans3.setToValue(color);
-							fillTrans3.setCycleCount(50);
-							fillTrans3.setAutoReverse(true);
-							fillTrans3.play();
-							//DISK 4
-							FillTransition fillTrans4 = new FillTransition(Duration.millis(1000));
-							fillTrans4.setShape(dc4);
-							fillTrans4.setFromValue(Color.BLACK);
-							fillTrans4.setToValue(color);
-							fillTrans4.setCycleCount(50);
-							fillTrans4.setAutoReverse(true);
-							fillTrans4.play();
-							for(int q=0; q<7; q++){
-								VBox vq = (VBox) pane.getChildren().get(q);
-								vq.setOnMouseClicked(null);
-							}
+							flashDisks(dc1, dc2, dc3, dc4, color);
+							//Disable clicking
+							disableClick(pane);
 						}
 					}
 				}
@@ -208,42 +108,9 @@ public class ConnectFour extends Application {
 						Circle drc4 = (Circle) drv4.getChildren().get(drj-3);
 						if((drc1.getFill() == Color.YELLOW && drc2.getFill() == Color.YELLOW && drc3.getFill() == Color.YELLOW && drc4.getFill() == Color.YELLOW) || (drc1.getFill() == Color.RED && drc2.getFill() == Color.RED && drc3.getFill() == Color.RED && drc4.getFill() == Color.RED)){
 							//FLASHING WIN
-							//DISK 1
-							FillTransition fillTrans1 = new FillTransition(Duration.millis(1000));
-							fillTrans1.setShape(drc1);
-							fillTrans1.setFromValue(Color.BLACK);
-							fillTrans1.setToValue(color);
-							fillTrans1.setCycleCount(50);
-							fillTrans1.setAutoReverse(true);
-							fillTrans1.play();
-							//DISK 2
-							FillTransition fillTrans2 = new FillTransition(Duration.millis(1000));
-							fillTrans2.setShape(drc2);
-							fillTrans2.setFromValue(Color.BLACK);
-							fillTrans2.setToValue(color);
-							fillTrans2.setCycleCount(50);
-							fillTrans2.setAutoReverse(true);
-							fillTrans2.play();
-							//DISK 3
-							FillTransition fillTrans3 = new FillTransition(Duration.millis(1000));
-							fillTrans3.setShape(drc3);
-							fillTrans3.setFromValue(Color.BLACK);
-							fillTrans3.setToValue(color);
-							fillTrans3.setCycleCount(50);
-							fillTrans3.setAutoReverse(true);
-							fillTrans3.play();
-							//DISK 4
-							FillTransition fillTrans4 = new FillTransition(Duration.millis(1000));
-							fillTrans4.setShape(drc4);
-							fillTrans4.setFromValue(Color.BLACK);
-							fillTrans4.setToValue(color);
-							fillTrans4.setCycleCount(50);
-							fillTrans4.setAutoReverse(true);
-							fillTrans4.play();
-							for(int q=0; q<7; q++){
-								VBox vq = (VBox) pane.getChildren().get(q);
-								vq.setOnMouseClicked(null);
-							}
+							flashDisks(drc1, drc2, drc3, drc4, color);
+							//Disable clicking
+							disableClick(pane);
 						}
 					}
 				}
@@ -262,6 +129,30 @@ public class ConnectFour extends Application {
 		stage.setTitle("Connect Four");
 		stage.setScene(scene);
 		stage.show();
+	}
+
+	public void flashDisk(Circle c1 , Color color){
+		FillTransition fillTrans = new FillTransition(Duration.millis(1000));
+		fillTrans.setShape(c1);
+		fillTrans.setFromValue(Color.BLACK);
+		fillTrans.setToValue(color);
+		fillTrans.setCycleCount(50);
+		fillTrans.setAutoReverse(true);
+		fillTrans.play();
+	}
+
+	public void flashDisks(Circle c1, Circle c2, Circle c3, Circle c4, Color color){
+		flashDisk(c1, color);
+		flashDisk(c2, color);
+		flashDisk(c3, color);
+		flashDisk(c4, color);
+	}
+
+	public void disableClick(FlowPane pane){
+		for(int q=0; q<7; q++){
+			VBox vq = (VBox) pane.getChildren().get(q);
+			vq.setOnMouseClicked(null);
+		}
 	}
 
 	public static void main(String[] args) {
