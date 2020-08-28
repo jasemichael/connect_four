@@ -175,7 +175,6 @@ public class ConnectFour extends Application {
 		diagonalRightToLeft(pane, color);
 	}
 	public static void main(String[] args) {
-		System.out.println("Running GUI...");
 		launch(args);
 	}
 }
